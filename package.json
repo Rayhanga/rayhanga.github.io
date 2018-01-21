@@ -9,7 +9,7 @@
     "react-scripts": "1.1.0"
   },
   "scripts": {
-    "predeploy": "npm run build && np --any-branch --no-publish",
+    "predeploy": "npm run build && np --any-branch --no-publish --yolo",
     "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",

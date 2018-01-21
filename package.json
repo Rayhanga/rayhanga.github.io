@@ -9,14 +9,17 @@
     "react-scripts": "1.1.0"
   },
   "scripts": {
-    "predeploy": "npm run build && np --any-branch --no-publish --yolo",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build",
+    "postdeploy": "git push origin develop",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "bump_version": "np --any-branch --no-publish --yolo"
   },
   "devDependencies": {
+    "branchsite": "^4.0.2",
     "gh-pages": "^1.1.0"
   }
 }

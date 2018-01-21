@@ -11,7 +11,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build",
-    "postdeploy": "git push origin develop",
+    "postdeploy": "git push origin develop && npm run bump_version",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

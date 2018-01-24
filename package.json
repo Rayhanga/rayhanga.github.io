@@ -16,7 +16,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "bump_version": "np --any-branch --no-publish --yolo"
+    "bump_version": "np --any-branch --no-publish --yolo --tag"
   },
   "devDependencies": {
     "branchsite": "^4.0.2",

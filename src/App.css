@@ -1,0 +1,12 @@
+.Header {
+  text-align: center;
+}
+
+.Items{
+  padding: 2.5%;
+  margin-left: 25%;
+  margin-right: 25%;
+  display: run-in;
+  word-wrap: normal;
+  text-align: left;
+}

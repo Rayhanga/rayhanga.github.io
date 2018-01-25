@@ -2,10 +2,10 @@
 
 Here is the source code of the web, you may fork or even clone it to your local machine.
 
-# Built With
+## Built With
 
 * [react.js](https://reactjs.org/)
 
-# Author
+## Author
 
 * **Rayhan Gusty Alif** - *Initial works* - [Rayhanga](https://github.com/Rayhanga)

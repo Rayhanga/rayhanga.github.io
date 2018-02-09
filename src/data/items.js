@@ -28,4 +28,17 @@ const initialItems = {
   }
 };
 
+//for main app.js
+<div class="row">
+  {
+    Object
+    /*
+    This will make the item list from the json file.
+    It'll loop to make an object for each "Key" based from the json.
+    */
+      .keys(this.state.items) //Get "Key" from the items state.
+      .map(key => <Item key={key} meta={this.state.items[key]} />) // The loop.
+  }
+</div>
+
 export {initialItems};

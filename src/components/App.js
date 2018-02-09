@@ -1,37 +1,35 @@
 import React, { Component } from 'react';
-import '../App.css';
-import Header from "./Header.js";
-import Item from "./Item.js";
-import {initialItems} from '../items.js';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Home from "../pages/Home.js";
+import About from "../pages/About.js"
+//import Item from "./Item.js";
+//import {initialItems} from '../items.js';
 
 class App extends Component {
 
-  constructor() {
+  /*constructor() {
     super();
 
     this.state = {
-      items: initialItems,
+      //items: initialItems,
       title: "Rayhan Gusty Alif"
     };
-  }
+  }*/
+
+  //Execute when component loaded
+  /*componentDidMount() {
+    //Change the title into this.state.title
+    document.title = this.state.title;
+  }*/
 
   render() {
-
     return(
-      <div className="App">
-        <Header text={ this.state.title } className="Header" />
-        <div className="Items">
-          {
-            Object
-            /*
-            This will make the item list from the json file.
-            It'll loop to make an object for each "Key" based from the json.
-            */
-              .keys(this.state.items) //Get "Key" from the items state.
-              .map(key => <Item key={key} meta={this.state.items[key]} />) // The loop.
-          }
+      <Router>
+        <div>
+          <Route exact path="/" component={Home}/>
+          <Route path="/about" component={About}/>
         </div>
-      </div>
+      </Router>
     );
   }
 }

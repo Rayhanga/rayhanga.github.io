@@ -1,7 +1,7 @@
 {
   "homepage": "https://rayhanga.github.io",
   "name": "my-portfolio",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": true,
   "dependencies": {
     "phaser-ce": "^2.10.0",
@@ -13,7 +13,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build",
-    "postdeploy":"git push origin develop && git push --tags",
+    "postdeploy": "git push origin develop && git push --tags",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

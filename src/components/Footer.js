@@ -5,8 +5,13 @@ class Footer extends Component {
     return(
       <div className='page-footer center-on-small-only bg-dark'>
         <div className='container'>
+          <div className='row'>
           <div className='col-md'>
-          Hosted with <a href='https://pages.github.com/' target='_blank'>Github Pages.</a>
+          Hosted with <a href='https://pages.github.com/' target='_blank'>Github Pages</a>
+          </div>
+          <div className='col-rd'>
+          <a href='https://github.com/rayhanga/rayhanga.github.io/tree/develop' target='_blank'>Source Code</a>
+          </div>
           </div>
         </div>
         <div className='footer-copyright'>

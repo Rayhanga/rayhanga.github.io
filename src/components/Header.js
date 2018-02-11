@@ -6,6 +6,7 @@ class Header extends Component{
       <div className='jumbotron text-center bg-dark'>
         <div className='container'>
           <h1 className='display-4 font-weight-bold'>Rayhan Gusty Alif</h1>
+          <br / >
           <div className='row'>
             <div className='col-3' />
             <div className='col-2'>

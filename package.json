@@ -4,6 +4,7 @@
   "version": "0.2.0",
   "private": true,
   "dependencies": {
+    "phaser-ce": "^2.10.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
@@ -12,15 +13,16 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build",
-    "postdeploy": "git push origin develop && npm run bump_version",
+    "postdeploy": "git push origin develop",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "bump_version": "np --any-branch --no-publish --yolo --tag"
+    "bump_major": "npm version major -m '%s' ",
+    "bump_minor": "npm version minor -m '%s' ",
+    "bump_patch": "npm version patch -m '%s' "
   },
   "devDependencies": {
-    "branchsite": "^4.0.2",
     "gh-pages": "^1.1.0"
   }
 }

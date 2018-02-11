@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from "../pages/Home.js";
 import About from "../pages/About.js"
+import './App.css'
 //import Item from "./Item.js";
 //import {initialItems} from '../items.js';
 

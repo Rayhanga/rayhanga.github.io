@@ -1,7 +1,7 @@
 {
   "homepage": "https://rayhanga.github.io",
   "name": "my-portfolio",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "private": true,
   "dependencies": {
     "phaser-ce": "^2.10.0",

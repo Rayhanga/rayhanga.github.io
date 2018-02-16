@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import Header from '../components/Header.js';
+import Footer from '../components/Footer.js';
+import Error from './Error.js'
 
 class About extends Component {
   componentDidMount() {
@@ -7,6 +10,11 @@ class About extends Component {
   render() {
     return(
       <div>
+        <Header />
+        <div className="container contents">
+          <Error />
+        </div>
+        <Footer />
       </div>
     );
   }

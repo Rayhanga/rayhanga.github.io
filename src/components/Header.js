@@ -32,8 +32,8 @@ class Content extends Component {
             </a>
           </div>
           <div className='col'>
-            <a href='https://www.facebook.com/rayhan.gustyalif' target='_blank'>
-              <i className='fa fa-facebook fa-3x' alt='Facebook' title='Facebook'/>
+            <a href='mailto:vhawk23@gmail.com' target='_blank'>
+              <i className='fa fa-envelope fa-3x' alt='Facebook' title='Facebook'/>
             </a>
           </div>
           <div className='col'>
@@ -61,8 +61,8 @@ class ContentMin extends Component {
             </a>
           </div>
           <div className='col'>
-            <a href='https://www.facebook.com/rayhan.gustyalif' target='_blank'>
-              <i className='fa fa-facebook fa-2x' alt='Facebook' title='Facebook'/>
+            <a href='mailto:vhawk23@gmail.com' target='_blank'>
+              <i className='fa fa-envelope fa-2x' alt='Facebook' title='Facebook'/>
             </a>
           </div>
           <div className='col'>

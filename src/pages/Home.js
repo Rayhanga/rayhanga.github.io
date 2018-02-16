@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import MediaQuery from 'react-responsive';
 import Footer from '../components/Footer.js';
 import Header from '../components/Header.js';
+import Content from '../components/Content.js'
 import './Home.css';
 
 class Home extends Component {
@@ -11,12 +13,11 @@ class Home extends Component {
   render() {
     return(
       <div>
-        <div>
-          <Header />
-          <div className='container'>
-          </div>
-          <Footer />
+        <Header />
+        <div className="container contents">
+          <Content />
         </div>
+        <Footer />
       </div>
     );
   }

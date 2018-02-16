@@ -30,17 +30,18 @@ class Content extends Component {
               Hosted with: <a href='https://pages.github.com/' target='_blank'>Github Pages</a>
             </p>
           </div>
-          <div className='col' />
+          <div className='col'>
+            <div className='footer-copyright'>
+              <div className='container-fluid text-center'>
+                Created by me © 2018
+              </div>
+            </div>
+          </div>
           <div className='col'>
             <p className='text-right'>
               <a href='https://github.com/rayhanga/rayhanga.github.io/tree/develop' target='_blank'>Source Code</a>
             </p>
           </div>
-        </div>
-      </div>
-      <div className='footer-copyright'>
-        <div className='container-fluid text-center'>
-          Created by me © 2018
         </div>
       </div>
       </div>

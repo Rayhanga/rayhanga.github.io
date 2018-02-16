@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Footer from '../components/Footer.js';
 import Header from '../components/Header.js';
-import MediaQuery from 'react-responsive';
 import './Home.css';
 
 class Home extends Component {

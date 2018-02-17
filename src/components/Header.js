@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import MediaQuery from 'react-responsive';
 import './Header.css'
 
@@ -23,7 +24,9 @@ class Content extends Component {
   render() {
     return(
       <div className='container'>
-        <h1 className='display-4 font-weight-bold'>Rayhan Gusty Alif</h1>
+        <h1 className='display-4 font-weight-bold'>
+          Rayhan Gusty Alif
+        </h1>
         <br / >
         <div className='row'>
           <div className='col'>
@@ -52,7 +55,9 @@ class ContentMin extends Component {
   render() {
     return(
       <div className='container'>
-        <h2 className=' font-weight-bold'>Rayhan Gusty Alif</h2>
+        <h2 className='font-weight-bold'>
+          Rayhan Gusty Alif
+        </h2>
         <br / >
         <div className='row'>
           <div className='col'>

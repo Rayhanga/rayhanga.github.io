@@ -48,7 +48,7 @@ class WCID extends Component {
         <div className="row">
           <div className="col">
             <div className="card">
-              <div className="card-block">
+              <div className="card-block b0">
                 <h4 className="card-title">Java Programming</h4>
                 <span className="text-muted"><i>2015-2017</i></span>
                 <p className="card-text">I have an experience of Java programming for about 2 years. I will mostly understand some advanced topic for Java programming language.</p>
@@ -61,24 +61,6 @@ class WCID extends Component {
                 <h4 className="card-title">Website Developing</h4>
                 <span className="text-muted"><i>2016-now</i></span>
                 <p className="card-text">I have an experience of Website developing for about 3 years. This website is one of my project that involves with website developing.</p>
-              </div>
-            </div>
-          </div>
-          <div className="col">
-            <div className="card">
-              <div className="card-block">
-                <h4 className="card-title">Java Programming</h4>
-                <span className="text-muted"><i>2015-2017</i></span>
-                <p className="card-text">I have an experience of Java programming for about 2 years. I will mostly understand some advanced topic for Java programming language.</p>
-              </div>
-            </div>
-          </div>
-          <div className="col">
-            <div className="card">
-              <div className="card-block">
-                <h4 className="card-title">Java Programming</h4>
-                <span className="text-muted"><i>2015-2017</i></span>
-                <p className="card-text">I have an experience of Java programming for about 2 years. I will mostly understand some advanced topic for Java programming language.</p>
               </div>
             </div>
           </div>

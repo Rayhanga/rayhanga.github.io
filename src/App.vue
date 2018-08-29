@@ -77,6 +77,13 @@
         </v-tooltip>
       </v-toolbar-side-icon>
 
+      <v-spacer />
+
+      <v-toolbar-items>
+        <v-container fill-height class="font-weight-bold body-1">
+          v.{{version}}
+        </v-container>
+      </v-toolbar-items>
     </v-toolbar>
 
     <v-content>
@@ -84,13 +91,13 @@
     </v-content>
 
     <v-footer app color="grey darken-4 white--text">
-      <v-flex class='caption font-weight-black' text-xs-left pa-2>
+      <v-flex class='caption font-weight-black' xs4 text-xs-left pa-2>
         Hosted with <a target="_BLANK" href="https://pages.github.com/">Github Pages</a>
-      </v-flex><v-flex class='caption font-weight-black' text-xs-center pa-2>
-        Created with love &copy; {{new Date().getFullYear()}}
-        <p>v.{{ version }}</p>
       </v-flex>
-      <v-flex class='caption font-weight-black' text-xs-right pa-2>
+      <v-flex class='caption font-weight-black' xs4 text-xs-center pa-2>
+        Created with love &copy; {{new Date().getFullYear()}}
+      </v-flex>
+      <v-flex class='caption font-weight-black' xs4 text-xs-right pa-2>
         <a target="_BLANK" href="https://github.com/rayhanga/rayhanga.github.io/tree/develop">Source Code</a>
       </v-flex>
     </v-footer>

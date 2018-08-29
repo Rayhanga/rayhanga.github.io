@@ -1,19 +1,22 @@
 <template>
   <v-layout wrap>
-    <ContentContainer/>
-    <v-flex text-xs-center>
-      <router-link to="/test">Go To Test Page</router-link>
-    </v-flex>
+    <ContentContainer :contents="aData"/>
   </v-layout>
 </template>
 
 <script>
 import ContentContainer from '../components/ContentContainer.vue'
+import projectData from "../data/projects.json"
 
 export default {
-  name: 'Home',
+  name: 'Showcase',
   components: {
     ContentContainer
+  },
+  data () {
+    return {
+      aData: projectData
+    }
   }
 }
 </script>

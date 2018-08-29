@@ -6,6 +6,7 @@ import '@fortawesome/fontawesome-free/css/all.css'
 import 'material-icons/iconfont/material-icons.css';
 import 'vuetify/dist/vuetify.min.css'
 
+export const serverBus = new Vue();
 
 Vue.use(Vuetify, {
   iconfont: 'fa'

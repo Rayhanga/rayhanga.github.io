@@ -1,6 +1,6 @@
 # The Source Code
 
-Here is the source code of the web, you may fork or even clone it to your local machine.
+Here is the source code for the web, you may fork or even clone it to your local machine.
 
 ## Getting Started
 
@@ -23,7 +23,7 @@ npm update
 Deploy on localhost
 
 ```
-npm start
+npm run serve
 ```
 
 ## Built With

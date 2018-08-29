@@ -7,8 +7,10 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "deploydev": "git push origin develop",
     "predeploy": "npm run build",
-    "deploy": "push-dir --dir=dist --branch=master --cleanup"
+    "deploy": "push-dir --dir=dist --branch=master --cleanup",
+    "postdeploy": "npm run deploydev && git push --tags"
   },
   "dependencies": {
     "material-icons": "^0.2.3",

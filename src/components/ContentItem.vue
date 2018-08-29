@@ -1,5 +1,5 @@
 <template>
-  <v-flex xs6 pa-2>
+  <v-flex :xs12="content.full" xs6 pa-2>
       <v-card py-2 class="ContentItem">
         <v-card-title primary-title>
           <h1>{{ content.title }}</h1>

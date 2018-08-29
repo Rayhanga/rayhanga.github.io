@@ -1,10 +1,10 @@
 <template>
 	<v-container fluid>
 		<v-layout row wrap>
-			<ContentItem 
+			<ContentItem
 				v-for="content in contents"
 				:content="content"
-				v-bind:key="content.key"
+				v-bind:key="content.id"
 			/>
 		</v-layout>
 	</v-container>
@@ -20,8 +20,7 @@ export default {
 	},
 	props: {
 		contents: {
-			type: Array,
-			required: true
+			type: Array
 		}
 	}
 }

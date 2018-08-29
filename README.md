@@ -30,6 +30,8 @@ npm run serve
 
 * [vue.js](https://vuejs.org) - Web app framework used
 * [vuetify.js](https://vuetifyjs.com) - Component framework used
+* [material icon pack](https://material.io/tools/icons) - Icon pack used
+* [font awesome 5 icon pack](https://fontawesome.com/icons) - Icon pack used
 
 ## Author
 

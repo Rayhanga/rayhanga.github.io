@@ -1,21 +1,36 @@
-# Portofolio-Website
+# The Source Code
 
-## Project setup
+Here is the source code of the web, you may fork or even clone it to your local machine.
+
+## Getting Started
+
+These instructions will get you a copy of the project. Then you could deploy or test the source code on your local machine.
+
+### Prerequisites
+
+[Node Package Manager](https://www.npmjs.com/) - Package manager for the project
+
+### Installing
+
+Update the dependencies
+
 ```
-npm install
+npm update
 ```
 
-### Compiles and hot-reloads for development
+## Deployment
+
+Deploy on localhost
+
 ```
-npm run serve
+npm start
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Built With
 
-### Lints and fixes files
-```
-npm run lint
-```
+* [vue.js](https://vuejs.org) - Web app framework used
+* [vuetify.js](https://vuetifyjs.com) - Component framework used
+
+## Author
+
+* **Rayhan Gusty Alif** - *Initial works* - [Rayhanga](https://github.com/Rayhanga)

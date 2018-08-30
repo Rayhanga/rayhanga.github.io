@@ -10,7 +10,10 @@
     "deploydev": "git push origin develop",
     "predeploy": "npm run build",
     "deploy": "push-dir --dir=dist --branch=master --cleanup",
-    "postdeploy": "npm run deploydev && git push --tags"
+    "postdeploy": "npm run deploydev && git push --tags",
+    "v-patch": "npm version patch -m 'Upgrade to %s'",
+    "v-major": "npm version major -m 'Upgrade to %s'",
+    "v-minor": "npm version minor -m 'Upgrade to %s'"
   },
   "dependencies": {
     "material-icons": "^0.2.3",

@@ -69,12 +69,17 @@
       class="headline"
     >
       <v-toolbar-side-icon>
-        <v-tooltip right>
+        <v-tooltip right class="hidden-sm-and-down">
           <v-btn slot="activator" icon @click.stop ="drawer = !drawer">
             <v-icon>menu</v-icon>
           </v-btn>
-          <span>Click to Open Navigation Panel</span>
+          <span> Click to Open Navigation Panel</span>
         </v-tooltip>
+
+        <!-- For Mobile View-->
+        <v-btn class="hidden-md-and-up" icon @click.stop ="drawer = !drawer">
+            <v-icon>menu</v-icon>
+        </v-btn>
       </v-toolbar-side-icon>
 
       <v-spacer />

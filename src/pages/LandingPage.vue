@@ -7,8 +7,8 @@
                 src="https://lh3.googleusercontent.com/RvpYwAixaLwLwnawKUVge6G8tEVMvyo6uUy2xgzoTtDnWe5cGMrr0xyThUlEJYeODqBcxKB9I9KjCD8QpXUNr2VobixYj7Sng7rfNiyFm4oprbQxxCw5o3iHW061v7pkvgAQatoRniDyJMEQF7391ATqjk9Fw2nxSwiiAOQ1gLAEkuEQDAJAB0OqUw1PN5j4ghXUk92IE736l1KdhVkOo2PBMVAXgM29Y95M_-ogrBt-QOZGJnP5SCbVt2Jsn4owMmMWbvJGmN5aZt2EaOBGCXmglDRv7ZtBuf3L7etUZtUg0RFUrLXSrrrC1td9tBSsD7pydwpUfUxzc1tT9EprbqTVRt5UUd5Pr9lYKJoHgHEDqLufd9DsPVIK-fgHHCG5r46QHfXf6W4vdUvDEaKLftmhzniAuJKlz7apO6zAsH7Mnw3Pr1yKQEAWMBBD3SGk00Xr8yS8mmh3mijFYCcU_bmxnVc7HV12BUCckffZPD1llXG536YgduvhcmthUMqIYNuPxo5hJuqxgHCNXa-uGqX2w9Rtyk-7PW6DyqKeBCLYY-7btDv4e4qOFON7K_9qWLPm--l_0brRdAA1QP9gHM_U0w5GOM5yNBR8VjyuvrsDv6cpNPFDqmNh5tGD6mk=w1275-h956-no"
             >
                 <v-container fill-height fluid align-center>
-                    <v-flex text-xs-center class="headline">
-                        <h1 class="display-3">Little About Me</h1>
+                    <v-flex text-xs-center class="hidden-sm-and-down headline">
+                        <h1 class="display-3 ">Little About Me</h1>
                         <br />
                         <p>Hello, my name is Rayhan Gusty Alif</p>
                         <p>I'm a College Student <i>(for now)</i> that came from Indonesia.</p>
@@ -21,6 +21,21 @@
                             </v-btn>
                             <span>Click to Open Navigation Panel</span>
                         </v-tooltip>
+                    </v-flex>
+
+                    <!--Mobile View-->
+                    <v-flex text-xs-center class="hidden-md-and-up headline">
+                        <h1 class="display-2">Little About Me</h1>
+                        <br />
+                        <div class="body-1">
+                            <p>Hello, my name is Rayhan Gusty Alif</p>
+                            <p>I'm a College Student <i>(for now)</i> that came from Indonesia.</p>
+                            <p>I have passion for music, technology, and game.</p>
+                            <p>I'm also still learning how to develop a software or even to compose music.</p>
+                        </div>
+                        <v-btn slot="activator" icon ripple @click.stop ="openDrawer">
+                            <v-icon large>more_horiz</v-icon>
+                        </v-btn>
                     </v-flex>
                 </v-container>
             </v-parallax>     
@@ -40,8 +55,15 @@
                 src="https://lh3.googleusercontent.com/3-UHITpBhqxlv6na9JN8a4pD0qSRTA69cPpzc_VbfWtute0gfeZ9fHel3JWGpHNQr2piS5_uM7CCyL2oLwEoKXVAvhSBbBq3mc4oiSx3LPEux3-tq5H_DvnyBPmbyUO9vK6NR-Pb9dAkYqHKYtyjvMZxa3qDbqhWdub-3aFUrK5jSTrwxkdrniJmLcv_aCZM_ABT0sdcFMrUOlzDpC3GGanYA1MkPSpc81ad0ndG85bntVtXKwbN3yu1TV-FGAZFFNjlnI3DJQt9Z_vYTRwAb1jdYthTutOGbiljTTNl65HFoJjEebzVdAPEXYh5XiGwQvgr_YeeMxWqnkoxZ0GLjGQEizQNXn-FzceX4-qVKH5Xfl_YzUyjWOfokzjGzdLsKF1xZtTvlk6H7eMqfedagDoxePR0FO3-2_VXHF092JpCfA3svOIxtTkoc6-yApggo5IQMVyfdIt7iX8-fLePoDGNCwck-Ei_W0Cyw01TGKb-q03oGAaiIEwGtM6gPeTAjRVehgnnzpv8BXq3u_Du5vH5H-o26Bzu5fTQ4rRuhOPT55P90VKykNvrIebdmLBhS4PzlHjmxtII49Pd8RjewGZhiMBBtowGjN8dWum2acerst5VitK2qyMev67C2fw=w1275-h956-no"
             >
                 <v-container fill-height fluid align-center>
-                    <v-flex text-xs-center class="caption font-weight-black">
-                        <h1 class="display-3"><i>"True Self Is Without Form"</i></h1>
+                    <v-flex text-xs-center class="hidden-sm-and-down caption font-weight-bold">
+                        <h1 class="display-3 font-weight-black"><i>"True Self Is Without Form"</i></h1>
+                        <br />
+                        <i>Zenyatta - Overwatch</i>
+                    </v-flex>
+                    
+                    <!--Mobile View -->
+                    <v-flex text-xs-center class="hidden-md-and-up caption font-weight-bold">
+                        <h1 class="title font-weight-black"><i>"True Self Is Without Form"</i></h1>
                         <br />
                         <i>Zenyatta - Overwatch</i>
                     </v-flex>

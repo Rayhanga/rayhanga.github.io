@@ -5,6 +5,7 @@
       dark
       temporary
       app
+      :style="{ 'width': 'window.innerWidth'}"
     >
       <v-toolbar flat >
         <v-list>

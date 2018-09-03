@@ -8,7 +8,7 @@ import 'material-icons/iconfont/material-icons.css';
 import 'vuetify/dist/vuetify.min.css'
 
 // Initialize Firebase
-var config = {
+let config = {
   apiKey: "AIzaSyBRklyYIHs9q3g-XICl8_lZ7gXlBxK3t8U",
   authDomain: "porto-web-data.firebaseapp.com",
   databaseURL: "https://porto-web-data.firebaseio.com",
@@ -18,6 +18,8 @@ var config = {
 };
 firebase.initializeApp(config);
 
+let app;
+
 export const serverBus = new Vue();
 
 Vue.use(Vuetify, {
@@ -26,6 +28,10 @@ Vue.use(Vuetify, {
 Vue.use(VueRouter)
 Vue.config.productionTip = false
 
-new Vue({
-  render: h => h(App)
-}).$mount('#app')
+firebase.auth().onAuthStateChanged(function(user) {
+  if (!app) {
+    app = new Vue({
+        render: h => h(App)
+      }).$mount('#app')
+  }
+})

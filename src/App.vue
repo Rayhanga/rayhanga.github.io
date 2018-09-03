@@ -20,7 +20,7 @@
       <v-spacer/>
 
       <v-list pa-1>
-        <v-list-tile avatar tag="div" to="/">
+        <v-list-tile tag="div" to="/">
           <v-list-tile-avatar>
             <v-icon medium>home</v-icon>
           </v-list-tile-avatar>
@@ -31,7 +31,7 @@
       </v-list>
 
       <v-list pa-1>
-        <v-list-tile avatar tag="div" to="/blog">
+        <v-list-tile tag="div" to="/blog">
           <v-list-tile-avatar>
             <v-icon medium>web</v-icon>
           </v-list-tile-avatar>
@@ -42,7 +42,7 @@
       </v-list>
 
       <v-list pa-1>
-        <v-list-tile avatar tag="div" to="/projects">
+        <v-list-tile tag="div" to="/projects">
           <v-list-tile-avatar>
             <v-icon medium>assignment</v-icon>
           </v-list-tile-avatar>
@@ -53,14 +53,14 @@
       </v-list>
       
       <v-list pa-1>
-        <v-list-tile avatar tag="div">
-          <v-list-tile-avatar>
-            <v-icon medium>phone</v-icon>
-          </v-list-tile-avatar>
-          <v-list-tile-content>
-            <v-list-tile-title>Contact</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
+          <v-list-tile tag="div" @click="contactMenu">
+            <v-list-tile-avatar>
+              <v-icon medium>phone</v-icon>
+            </v-list-tile-avatar>
+            <v-list-tile-content>
+              <v-list-tile-title>Contact</v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
       </v-list>
     </v-navigation-drawer>
 
@@ -96,6 +96,15 @@
         <router-view></router-view>
     </v-content>
 
+    <v-bottom-sheet full-width v-model="sheet">
+      <v-list dark>
+        <v-subheader class="title font-weight-black">Contact Me Via:</v-subheader>
+        <v-list-tile>
+
+        </v-list-tile>
+      </v-list>
+    </v-bottom-sheet>
+
     <v-footer app color="grey darken-4 white--text">
       <v-flex class='caption font-weight-black' xs4 text-xs-left pa-2>
         Hosted with <a target="_BLANK" href="https://pages.github.com/">Github Pages</a>
@@ -111,20 +120,35 @@
 </template>
 
 <script>
+import firebase from 'firebase'
 import pkgData from '../package.json'
 import VueRouter from 'vue-router'
 import { serverBus } from './main.js'
 import Showcase from './pages/Showcase.vue'
 import Blog from './pages/Blog.vue'
 import LandingPage from './pages/LandingPage.vue'
+import Login from './pages/Login.vue'
+import UserPage from './pages/UserPage.vue'
 
 const routes = [
+  { path: '*', redirect: '/'},
   { path: '/', component: LandingPage},
   { path: '/projects', component: Showcase},
-  { path: '/blog', component: Blog }
+  { path: '/blog', component: Blog },
+  { path: '/login', component: Login},
+  { path: '/usr', component: UserPage, meta: { requiresAuth: true }}
 ]
 
 const router = new VueRouter({routes})
+
+router.beforeEach((to, from, next) => {
+  let currentUser = firebase.auth().currentUser;
+  let requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+
+  if (requiresAuth && !currentUser) next ('login')
+  else if (!requiresAuth && currentUser) next ('usr')
+  else next()
+})
 
 export default {
   name: 'app',
@@ -141,6 +165,13 @@ export default {
     serverBus.$on('openDrawer', (drawer) => {
       this.drawer = drawer;
     });
+  },
+  methods : {
+    contactMenu: function() {
+      // Simple method to close Navigation Drawer while opening Contact Sheet
+      this.drawer = false
+      this.sheet = true
+    }
   }
 }
 </script>

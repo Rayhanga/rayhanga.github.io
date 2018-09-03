@@ -15,11 +15,11 @@
     "v-minor": "npm version minor -m 'Upgrade to %s'"
   },
   "dependencies": {
-    "firebase": "^5.4.1",
+    "firebase": "^5.4.2",
     "material-icons": "^0.2.3",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
-    "vuetify": "^1.1.14"
+    "vuetify": "^1.2.1"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.3.1",

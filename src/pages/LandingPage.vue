@@ -11,7 +11,7 @@
                         <h1 class="display-3 ">Little About Me</h1>
                         <br />
                         <p>Hello, my name is Rayhan Gusty Alif</p>
-                        <p>{{profession}} <i>(for now)</i> that came from Indonesia.</p>
+                        <p>I'm a {{profession}} <i>(for now)</i> that came from Indonesia.</p>
                         <p>I have passion for music, technology, and game.</p>
                         <p>I'm also still learning how to develop a software or even to compose music.</p>
                         <br/>
@@ -29,7 +29,7 @@
                         <br />
                         <div class="body-1">
                             <p>Hello, my name is Rayhan Gusty Alif</p>
-                            <p>{{profession}} <i>(for now)</i> that came from Indonesia.</p>
+                            <p>I'm a {{profession}} <i>(for now)</i> that came from Indonesia.</p>
                             <p>I have passion for music, technology, and game.</p>
                             <p>I'm also still learning how to develop a software or even to compose music.</p>
                         </div>

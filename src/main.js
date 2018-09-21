@@ -16,6 +16,7 @@ let config = {
   storageBucket: "porto-web-data.appspot.com",
   messagingSenderId: "288626834727"
 };
+
 firebase.initializeApp(config);
 
 let app;
@@ -25,7 +26,9 @@ export const serverBus = new Vue();
 Vue.use(Vuetify, {
   iconfont: 'fa'
 })
+
 Vue.use(VueRouter)
+
 Vue.config.productionTip = false
 
 firebase.auth().onAuthStateChanged(function(user) {

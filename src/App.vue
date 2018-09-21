@@ -69,7 +69,7 @@
       color="grey darken-3 white--text"
       class="headline"
     >
-      <v-toolbar-side-icon>
+      <v-toolbar-side-icon v-if="!currentUser">
         <v-tooltip right class="hidden-sm-and-down">
           <v-btn slot="activator" icon @click.stop ="drawer = !drawer">
             <v-icon>menu</v-icon>
@@ -99,8 +99,29 @@
     <v-bottom-sheet full-width v-model="sheet">
       <v-list dark>
         <v-subheader class="title font-weight-black">Contact Me Via:</v-subheader>
-        <v-list-tile>
-
+        <v-list-tile target="_BLANK" href="https://github.com/rayhanga">
+          <v-list-tile-avatar>
+            <v-icon medium>fab fa-github</v-icon>
+          </v-list-tile-avatar>
+          <v-list-tile-title>
+            /Rayhanga
+          </v-list-tile-title>
+        </v-list-tile>
+        <v-list-tile href="mailto:rayhangustyalif@gmail.com">
+          <v-list-tile-avatar>
+            <v-icon medium>fas fa-envelope</v-icon>
+          </v-list-tile-avatar>
+          <v-list-tile-title>
+            rayhangustyalif@gmail.com
+          </v-list-tile-title>
+        </v-list-tile>
+        <v-list-tile target="_BLANK" href="https://twitter.com/rayhanga">
+          <v-list-tile-avatar>
+            <v-icon medium>fab fa-twitter</v-icon>
+          </v-list-tile-avatar>
+          <v-list-tile-title>
+            @rayhanga
+          </v-list-tile-title>
         </v-list-tile>
       </v-list>
     </v-bottom-sheet>
@@ -111,6 +132,7 @@
       </v-flex>
       <v-flex class='caption font-weight-black' xs4 text-xs-center pa-2>
         Created with love &copy; {{new Date().getFullYear()}}
+        {{test}}
       </v-flex>
       <v-flex class='caption font-weight-black' xs4 text-xs-right pa-2>
         <a target="_BLANK" href="https://github.com/rayhanga/rayhanga.github.io/tree/develop">Source Code</a>
@@ -135,18 +157,18 @@ const routes = [
   { path: '/', component: LandingPage},
   { path: '/projects', component: Showcase},
   { path: '/blog', component: Blog },
-  { path: '/login', component: Login},
+  { path: '/login', component: Login },
   { path: '/usr', component: UserPage, meta: { requiresAuth: true }}
 ]
 
 const router = new VueRouter({routes})
 
 router.beforeEach((to, from, next) => {
-  let currentUser = firebase.auth().currentUser;
-  let requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+  var currentUser = firebase.auth().currentUser;
+  var requiresAuth = to.matched.some(record => record.meta.requiresAuth);
 
   if (requiresAuth && !currentUser) next ('login')
-  else if (!requiresAuth && currentUser) next ('usr')
+  else if (!requiresAuth && currentUser) next()
   else next()
 })
 
@@ -166,7 +188,7 @@ export default {
       this.drawer = drawer;
     });
   },
-  methods : {
+  methods: {
     contactMenu: function() {
       // Simple method to close Navigation Drawer while opening Contact Sheet
       this.drawer = false
@@ -174,6 +196,7 @@ export default {
     }
   }
 }
+
 </script>
 
 <style>

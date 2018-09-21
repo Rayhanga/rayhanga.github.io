@@ -2,8 +2,8 @@
     <div class="text-xs-center">
         <v-dialog v-model="dialog" persistent width="500">
             <v-layout>
-                <v-flex py-4 xs6 class="display-1" text-xs-center>
-                Login Page
+                <v-flex pa-4 xs6 class="display-1" text-xs-left>
+                Login
                 </v-flex>
                 <v-flex xs6 text-xs-right>
                     <v-btn dark icon to="/">

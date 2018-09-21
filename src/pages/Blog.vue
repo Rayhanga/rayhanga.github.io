@@ -1,15 +1,15 @@
 <template>
   <v-layout wrap>
-    <ContentContainer v-if="aData.length != 0" :contents="aData"/>
-		<v-flex pa-2 text-xs-center v-else>
-			<h1 class>Nothing Is Here Yet :(</h1>
+    <ContentContainer :postType="'posts'" :contents="aData"/>
+		<v-flex pa-2 text-xs-center v-if="aData.length = 0">
+			<h1 class="title">Please Wait...</h1>
 		</v-flex>
   </v-layout>
 </template>
 
 <script>
 import ContentContainer from '../components/ContentContainer.vue'
-import jsonData from "../data/blogposts.json"
+import firebase from 'firebase'
 
 export default {
   name: 'Blog',
@@ -18,8 +18,19 @@ export default {
   },
   data () {
     return {
-      aData: jsonData
+      aData: []
     }
-  }
+  },
+  created () {
+    const postsRef = firebase.database().ref('posts')
+    postsRef.on('value', snapshot => {
+      this.aData= snapshot.val();
+    })
+  },
+	props: {
+		extData: {
+			type: Array
+		}
+	}
 }
 </script>

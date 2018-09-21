@@ -11,7 +11,7 @@
                         <h1 class="display-3 ">Little About Me</h1>
                         <br />
                         <p>Hello, my name is Rayhan Gusty Alif</p>
-                        <p>I'm a College Student <i>(for now)</i> that came from Indonesia.</p>
+                        <p>{{profession}} <i>(for now)</i> that came from Indonesia.</p>
                         <p>I have passion for music, technology, and game.</p>
                         <p>I'm also still learning how to develop a software or even to compose music.</p>
                         <br/>
@@ -29,7 +29,7 @@
                         <br />
                         <div class="body-1">
                             <p>Hello, my name is Rayhan Gusty Alif</p>
-                            <p>I'm a College Student <i>(for now)</i> that came from Indonesia.</p>
+                            <p>{{profession}} <i>(for now)</i> that came from Indonesia.</p>
                             <p>I have passion for music, technology, and game.</p>
                             <p>I'm also still learning how to develop a software or even to compose music.</p>
                         </div>
@@ -86,6 +86,7 @@
 </template>
 
 <script>
+import firebase from 'firebase'
 import App from '../App.vue'
 import { serverBus } from '../main.js'
 
@@ -102,6 +103,17 @@ export default {
             this.drawer = true
             serverBus.$emit('openDrawer', this.drawer)
         }
+    },
+    data () {
+        return {
+            profession: ""
+        }
+    },
+    created () {
+        const professionRef = firebase.database().ref('status').child('profession')
+        professionRef.once('value', snapshot => {
+            this.profession = snapshot.val();
+        })
     }
 }
 </script>

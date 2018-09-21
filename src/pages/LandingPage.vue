@@ -109,7 +109,7 @@ export default {
             profession: ""
         }
     },
-    created () {
+    beforeMount () {
         const professionRef = firebase.database().ref('status').child('profession')
         professionRef.once('value', snapshot => {
             this.profession = snapshot.val();

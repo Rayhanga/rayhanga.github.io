@@ -4,7 +4,7 @@
             <v-parallax 
                 light
                 alt="Blue Ocean"
-                src="https://lh3.googleusercontent.com/RvpYwAixaLwLwnawKUVge6G8tEVMvyo6uUy2xgzoTtDnWe5cGMrr0xyThUlEJYeODqBcxKB9I9KjCD8QpXUNr2VobixYj7Sng7rfNiyFm4oprbQxxCw5o3iHW061v7pkvgAQatoRniDyJMEQF7391ATqjk9Fw2nxSwiiAOQ1gLAEkuEQDAJAB0OqUw1PN5j4ghXUk92IE736l1KdhVkOo2PBMVAXgM29Y95M_-ogrBt-QOZGJnP5SCbVt2Jsn4owMmMWbvJGmN5aZt2EaOBGCXmglDRv7ZtBuf3L7etUZtUg0RFUrLXSrrrC1td9tBSsD7pydwpUfUxzc1tT9EprbqTVRt5UUd5Pr9lYKJoHgHEDqLufd9DsPVIK-fgHHCG5r46QHfXf6W4vdUvDEaKLftmhzniAuJKlz7apO6zAsH7Mnw3Pr1yKQEAWMBBD3SGk00Xr8yS8mmh3mijFYCcU_bmxnVc7HV12BUCckffZPD1llXG536YgduvhcmthUMqIYNuPxo5hJuqxgHCNXa-uGqX2w9Rtyk-7PW6DyqKeBCLYY-7btDv4e4qOFON7K_9qWLPm--l_0brRdAA1QP9gHM_U0w5GOM5yNBR8VjyuvrsDv6cpNPFDqmNh5tGD6mk=w1275-h956-no"
+                src="https://lh3.googleusercontent.com/OJSizqNcaKxFOpR80FZfr5yx3VaJhzAnC5YXQGn3yWVEK4EnTouO6tKxpwRlTGgwFTlqfROP1HrqF_PlzDfoKHHZgHxCMTvxRa96IQFdtUZqCm_KIscooKfWxeLBbIL6o6Ne2qDLjVCSWClB-_AGAl1LTFoEX_sQvvocjeby3qcAo-ytYGYFac0eGId31ApCZyca4BwdWGARI9o2i949NUPURrtAoDs5g6BeSUNTqN87ZbG2uha5AjUxRYkxjzEQYWM3-khpwSVp8K2Cg7s6QP2qs3HZwi2AIhpn-3hIJ_gmJFKe5G1j5-OVSnJTF8ENWvOFICy94qSHfWLml2Wkmma0dxeOfNrmcGOzkLOSnrmPyQEKZe4nodR9dmJIBa2lz6cfwDtghSqSmuD031lw0huN1opXSOuiFgj5M8oRcC4Bkj16PwD44GerAv0bTlpvbLFmtM9a5-IzlBuI2ygd-LIRoCq37zXIndMAZBzFmWW6F_YkQprkGNE1tC4OoZuU3iuI_CzKbf9CD3zXDxD06Pe_gO8vXHdo7u23eChD0ORn8r-QMkz4F4ZHC6SCleK4Uw7gnzoSWCdXmYeSNL-tVlgEW-gIws9eS_XIvRi7qfmxf_JFyxG3pmNfZQOvMzNTKcT4o3j5J41t8QnmX_5G3Z4gS1k7DwrJSmsTcw2ZKw3v_ZSsi9BjbGAk=w1267-h950-no"
             >
                 <v-container fill-height fluid align-center>
                     <v-flex text-xs-center class="hidden-sm-and-down headline">

@@ -117,7 +117,6 @@ export default {
     deletePost () {
       const postRef = firebase.database().ref().child(this.postType).child(this.$vnode.key);
       postRef.remove()
-      vm.$forceUpdate();
     }
   }
 }

@@ -75,13 +75,11 @@
 
 <script>
 import firebase from 'firebase'
-import AddContent from '../components/AddContent.vue'
 import App from '../App.vue'
 import Blog from './Blog.vue'
 
 export default {
     name: "UserPage",
-    components: AddContent,
     data () {
         return {
             Uname: firebase.auth().currentUser.email,

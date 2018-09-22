@@ -9,6 +9,7 @@ These instructions will get you a copy of the project. Then you could deploy or 
 ### Prerequisites
 
 [Node Package Manager](https://www.npmjs.com/) - Package manager for the project
+
 [Vue-cli](https://cli.vuejs.org/) - Tools to manage the project
 
 ### Installing

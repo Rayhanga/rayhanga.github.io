@@ -9,8 +9,14 @@ These instructions will get you a copy of the project. Then you could deploy or 
 ### Prerequisites
 
 [Node Package Manager](https://www.npmjs.com/) - Package manager for the project
+[Vue-cli](https://cli.vuejs.org/) - Tools to manage the project
 
 ### Installing
+
+Get Vue-cli (if got error 404 Not Found: @akryum/winattr@^3.0.0)
+```
+sudo npm install --registry=https://registry.npmjs.com/ -g @vue/cli
+```
 
 Update the dependencies
 

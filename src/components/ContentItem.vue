@@ -52,7 +52,9 @@
           <v-btn
             v-if="!signedOut"
             @click="deletePost"
-          >Delete Post</v-btn>
+          >
+            Delete Post
+          </v-btn>
           <v-btn
             @click="full = !full"
             v-if="content.text.length > 300"
@@ -124,10 +126,4 @@ export default {
   }
 }
 </script>
-
-<style>
-.gray-bg{
-  background: gray
-}
-</style>
 

@@ -41,6 +41,7 @@
         </v-list-tile>
       </v-list>
 
+      <!--
       <v-list pa-1>
         <v-list-tile tag="div" to="/projects">
           <v-list-tile-avatar>
@@ -51,6 +52,7 @@
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
+      -->
       
       <v-list pa-1>
           <v-list-tile tag="div" @click="contactMenu">

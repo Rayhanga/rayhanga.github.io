@@ -79,6 +79,11 @@ export default {
                 }
             )
         }
+    },
+    created () {
+        if (firebase.auth().currentUser){
+            App.router.replace('usr')
+        }
     }
 }
 </script>

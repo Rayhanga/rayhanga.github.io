@@ -13,23 +13,15 @@
                     slot="activator"
                 >See Raw Blog Page Data</v-btn>
 
-                <v-flex pt-4 xs12 text-xs-center class="title">
+                <v-flex py-2 xs12 text-xs-center class="title">
                     Raw Data:
                 </v-flex>
 
-                <v-flex pt-1 xs12 text-xs-center class="caption">
+                <v-flex py-2 xs12 text-xs-center class="caption">
                     {{currentPosts}}
                 </v-flex>
 
-                <v-flex xs12 pa-2>
-                    <Blog />
-                </v-flex>
-
             </v-dialog>
-        </v-flex>
-
-        <v-flex xs6 pa-3 text-xs-center>
-            <h1>Add New Project</h1>
         </v-flex>
 
         <v-flex xs6 pa-3 text-xs-center>
@@ -76,7 +68,6 @@
 <script>
 import firebase from 'firebase'
 import App from '../App.vue'
-import Blog from './Blog.vue'
 
 export default {
     name: "UserPage",
@@ -102,6 +93,11 @@ export default {
         changeProfession: function() {
             const professionRef = firebase.database().ref('status').child('profession')
             professionRef.set(this.newProfession)
+        },
+        toggleMaintenance: function() {
+            this.maintenanceMode = !this.maintenanceMode
+            const maintenanceRef = firebase.database().ref('status').child('maintenance')
+            maintenanceRef.set(this.maintenanceMode)
         }
     },
     created() {
@@ -112,12 +108,7 @@ export default {
         const postsRef = firebase.database().ref('posts')
         postsRef.on('value', snapshot => {
             this.currentPosts = snapshot.val();
-        })
-        
+        })        
     }
 }
 </script>
-
-<style>
-
-</style>

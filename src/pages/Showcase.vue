@@ -1,8 +1,8 @@
 <template>
   <v-layout wrap>
     <!--ContentContainer v-if="aData.length != 0" :contents="aData"/-->
-		<v-flex pa-2 text-xs-center>
-			<h1 class="title">Work In Progress...</h1>
+		<v-flex pa-2 text-xs-center v-if="aData.length = 0">
+			<h1 class="title">Please Wait...</h1>
 		</v-flex>
   </v-layout>
 </template>

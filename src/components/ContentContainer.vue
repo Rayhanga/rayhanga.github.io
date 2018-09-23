@@ -79,7 +79,7 @@ export default {
 		}
 	},
 	created () {
-		this.signedOut = !firebase.auth().currentUser;
+		this.signedOut = !firebase.auth().currentUser;	
 	},
 	methods: {
 		addPost () {

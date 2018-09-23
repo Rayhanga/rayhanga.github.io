@@ -1,16 +1,14 @@
 <template>
-  <v-flex v-if="this.$vnode.key != 'length'" :xs12="full" :xs6="!full" pa-2>
+  <v-flex v-if="this.$vnode.key != 'length'" xs12 pa-2>
       <v-card py-2 class="ContentItem">
         <v-card-title primary-title>
-          <h1>{{ content.title }}</h1>
+          <h1>
+            <vue-markdown>{{ content.title }}</vue-markdown>
+          </h1>
         </v-card-title>
         <v-card-text>
-          <p v-if="!full" class="text-truncate">
-            {{ content.text }}
-          </p>
-          <p v-else-if="full" class="text-no-wrap">
-            {{ content.text }}
-          </p>
+          <vue-markdown>{{content.text}}
+          </vue-markdown>
         </v-card-text>
         <v-card-actions>
           <v-dialog
@@ -57,6 +55,7 @@
           >Delete Post</v-btn>
           <v-btn
             @click="full = !full"
+            v-if="content.text.length > 300"
           >
             <span v-if="!full">More</span>
             <span v-else-if="full">Less</span>
@@ -67,10 +66,14 @@
 </template>
 
 <script>
+import VueMarkdown from 'vue-markdown'
 import firebase from 'firebase'
 
 export default {
   name: 'ContentItem',
+  components: {
+    VueMarkdown
+  },
   props: {
     content: {
       type: Object,
@@ -121,3 +124,10 @@ export default {
   }
 }
 </script>
+
+<style>
+.gray-bg{
+  background: gray
+}
+</style>
+

@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Vuetify from 'vuetify'
 import VueRouter from 'vue-router'
 import firebase from 'firebase'
-import VueMarkdown from 'vue-markdown'
 import App from './App.vue'
 import '@fortawesome/fontawesome-free/css/all.css'
 import 'material-icons/iconfont/material-icons.css';

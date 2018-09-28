@@ -153,6 +153,7 @@ import Blog from './pages/Blog.vue'
 import LandingPage from './pages/LandingPage.vue'
 import Login from './pages/Login.vue'
 import UserPage from './pages/UserPage.vue'
+import ContentDetails from './components/ContentDetails.vue'
 
 const routes = [
   { path: '*', redirect: '/'},
@@ -160,7 +161,8 @@ const routes = [
   { path: '/projects', component: Showcase},
   { path: '/blog', component: Blog },
   { path: '/login', component: Login },
-  { path: '/usr', component: UserPage, meta: { requiresAuth: true }}
+  { path: '/usr', component: UserPage, meta: { requiresAuth: true }},
+  { path: '/blog/:postId', name:"ContentDetails", component: ContentDetails}
 ]
 
 const router = new VueRouter({routes})

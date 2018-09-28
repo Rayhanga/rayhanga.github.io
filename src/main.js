@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 import VueRouter from 'vue-router'
+import VueTruncate from 'vue-truncate-filter'
 import firebase from 'firebase'
 import App from './App.vue'
 import '@fortawesome/fontawesome-free/css/all.css'
@@ -28,6 +29,8 @@ Vue.use(Vuetify, {
 })
 
 Vue.use(VueRouter)
+
+Vue.use(VueTruncate)
 
 Vue.config.productionTip = false
 

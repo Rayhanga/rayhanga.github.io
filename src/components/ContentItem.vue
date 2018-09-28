@@ -1,5 +1,5 @@
 <template>
-  <v-flex v-if="this.$vnode.key != 'length'" xs12 pa-2>
+  <v-flex v-if="this.$vnode.key != 'length'" pa-2>
       <v-card py-2 class="ContentItem">
         <v-card-title primary-title>
           <h1>
@@ -7,8 +7,7 @@
           </h1>
         </v-card-title>
         <v-card-text>
-          <vue-markdown>{{content.text}}
-          </vue-markdown>
+          {{content.text | truncate(100)}}
         </v-card-text>
         <v-card-actions>
           <v-dialog
@@ -56,11 +55,9 @@
             Delete Post
           </v-btn>
           <v-btn
-            @click="full = !full"
-            v-if="content.text.length > 300"
+            @click="moreDetail()"
           >
-            <span v-if="!full">More</span>
-            <span v-else-if="full">Less</span>
+            More
           </v-btn>
         </v-card-actions>
       </v-card>
@@ -96,13 +93,14 @@ export default {
       ],
       newText: "",
       newTitle: "",
-      full: false
+      postId: ""
     }
   },
   created () {
     this.signedOut = !firebase.auth().currentUser;
     this.newText = this.content.text;
     this.newTitle = this.content.title;
+    this.postId = this.$vnode.key;
   },
   methods: {
     editPost () {
@@ -122,6 +120,9 @@ export default {
     deletePost () {
       const postRef = firebase.database().ref().child(this.postType).child(this.$vnode.key);
       postRef.remove()
+    },
+    moreDetail () {
+      this.$router.push({name:"ContentDetails", params:{postId:this.postId, postType: this.postType, postContent:this.content}})
     }
   }
 }

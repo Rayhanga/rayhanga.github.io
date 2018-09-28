@@ -21,6 +21,7 @@
     "vue": "^2.5.17",
     "vue-markdown": "^2.2.4",
     "vue-router": "^3.0.1",
+    "vue-truncate-filter": "^1.1.7",
     "vuetify": "^1.2.1"
   },
   "devDependencies": {

@@ -162,7 +162,7 @@ const routes = [
   { path: '/blog', component: Blog },
   { path: '/login', component: Login },
   { path: '/usr', component: UserPage, meta: { requiresAuth: true }},
-  { path: '/blog/:postId', name:"ContentDetails", component: ContentDetails}
+  { path: '/blog/:id', component: ContentDetails, params: {id: ""}}
 ]
 
 const router = new VueRouter({routes})
@@ -183,7 +183,7 @@ export default {
     return {
       title: "Rayhan Gusty Alif",
       version: pkgData.version,
-      drawer: null
+      drawer: null,
     }
   },
   created() {

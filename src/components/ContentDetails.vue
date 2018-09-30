@@ -29,18 +29,30 @@ export default {
     name: "ContentDetails",
     components: {
         VueMarkdown
-    }, 
+    },
     data () {
         return {
             content: null
         }
     },
     created () {
-        this.content = this.$route.params.postContent
+        var postId = this.$route.params.id
+        var postUrl = new String (this.$route.path)
+
+        if(postUrl.includes("blog")){
+            const postRef = firebase.database().ref('posts').child(postId)
+            postRef.on('value', snapshot => {
+                if (snapshot.val() != null){
+                    this.content = snapshot.val()
+                } else {
+                    // Redirect to /blog
+                    alert("Whoops, There's Nothing Here")
+                    this.$router.replace('/blog/')
+                }
+            })
+        }
+    },
+    beforeCreate () {
     }
 }
 </script>
-
-<style>
-
-</style>

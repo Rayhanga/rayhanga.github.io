@@ -7,7 +7,7 @@
           </h1>
         </v-card-title>
         <v-card-text>
-          {{content.text | truncate(100)}}
+          <vue-markdown>{{content.text | truncate(100)}}</vue-markdown>
         </v-card-text>
         <v-card-actions>
           <v-dialog
@@ -65,6 +65,7 @@
 </template>
 
 <script>
+import ContentDetails from './ContentDetails.vue'
 import VueMarkdown from 'vue-markdown'
 import firebase from 'firebase'
 
@@ -113,7 +114,7 @@ export default {
         if (error){
           alert("Uh Oh! " + error)
         } else {
-          alert("Post Edited Successfully")
+          alert("Post Edited Successfully!")
         }
       })
     },
@@ -122,7 +123,10 @@ export default {
       postRef.remove()
     },
     moreDetail () {
-      this.$router.push({name:"ContentDetails", params:{postId:this.postId, postType: this.postType, postContent:this.content}})
+      var postUrl = new String (this.$route.path)
+      if (postUrl.includes('blog')){
+        this.$router.push('/blog/'+this.postId)
+      }
     }
   }
 }

@@ -1,0 +1,6 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700&family=Courier+Prime&family=Nunito:wght@400;600;700&display=swap">
+{{- $css := resources.Get "css/main.css" | css.TailwindCSS -}}
+{{- if hugo.IsProduction }}{{ $css = $css | minify | fingerprint }}{{ end -}}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}"{{ with $css.Data.Integrity }} integrity="{{ . }}"{{ end }}>

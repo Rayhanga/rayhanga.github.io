@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <script>
+  (function () {
+    var stored = localStorage.getItem('theme');
+    var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.dataset.theme = theme;
+  })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if not .IsHome }}{{ .Title }} &middot; {{ end }}{{ site.Title }}</title>
+  {{ partial "head.html" . }}
+</head>
+<body class="min-h-screen bg-surface-page text-primary font-body antialiased flex flex-col">
+  <main class="flex-1 w-full px-6 lg:px-[var(--page-margin)]">
+    {{ block "main" . }}{{ end }}
+  </main>
+</body>
+</html>

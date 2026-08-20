@@ -1,0 +1,12 @@
+{
+  "name": "rayhanga-portfolio",
+  "private": true,
+  "devDependencies": {
+    "tailwindcss": "^4.0.0",
+    "@tailwindcss/cli": "^4.0.0"
+  },
+  "scripts": {
+    "dev": "hugo server -D",
+    "build": "hugo --gc --minify"
+  }
+}

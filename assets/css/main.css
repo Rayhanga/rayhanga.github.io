@@ -1,0 +1,65 @@
+@import "tailwindcss" source(none);
+@source "layouts";
+@source "content";
+@import "./tokens/fonts.css";
+@import "./tokens/colors.css";
+@import "./tokens/typography.css";
+@import "./tokens/spacing.css";
+
+@theme inline {
+  /* Colors */
+  --color-black: var(--black);
+  --color-white: var(--white);
+  --color-gray-900: var(--gray-900);
+  --color-gray-700: var(--gray-700);
+  --color-gray-500: var(--gray-500);
+  --color-gray-400: var(--gray-400);
+  --color-gray-300: var(--gray-300);
+  --color-gray-250: var(--gray-250);
+  --color-gray-200: var(--gray-200);
+
+  --color-primary: var(--text-primary);
+  --color-secondary: var(--text-secondary);
+  --color-muted: var(--text-muted);
+  --color-nav: var(--text-nav);
+  --color-on-fill: var(--text-on-fill);
+
+  --color-surface-page: var(--surface-page);
+  --color-surface-card: var(--surface-card);
+  --color-surface-tag: var(--surface-tag);
+  --color-surface-cta: var(--surface-cta);
+
+  --color-hairline: var(--border-hairline);
+  --color-circle-stroke: var(--border-circle);
+  --color-divider: var(--border-divider);
+
+  /* Fonts */
+  --font-body: var(--font-body);
+  --font-display: var(--font-display);
+
+  /* Spacing (overrides Tailwind's default 1-8 scale with exact token px values) */
+  --spacing-1: var(--space-1);
+  --spacing-2: var(--space-2);
+  --spacing-3: var(--space-3);
+  --spacing-4: var(--space-4);
+  --spacing-5: var(--space-5);
+  --spacing-6: var(--space-6);
+  --spacing-7: var(--space-7);
+  --spacing-8: var(--space-8);
+
+  /* Radius */
+  --radius-sm: var(--radius-sm);
+  --radius-pill: var(--radius-pill);
+
+  /* Tracking */
+  --tracking-wide: var(--letter-spacing-wide);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--surface-page);
+  color: var(--text-primary);
+}

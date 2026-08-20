@@ -3,16 +3,28 @@
 {{- $text := .text -}}
 {{- $icon := .icon -}}
 {{- $extra := .class | default "" -}}
-{{- $tag := "button" -}}
-{{- if $href }}{{ $tag = "a" }}{{ end -}}
 {{- if eq $variant "ghost" -}}
-<{{ $tag }}{{ with $href }} href="{{ . }}"{{ end }} class="inline-flex items-center gap-2 h-11 pl-3 pr-4 rounded-pill shadow-[inset_0_0_0_1px_var(--color-hairline)] text-primary font-body text-2xl no-underline {{ $extra }}">
-  {{- with $icon }}{{ partial "icon.html" (dict "name" . "size" 22 "class" "text-primary shrink-0") }}{{ end -}}
-  <span class="whitespace-nowrap">{{ $text }}</span>
-</{{ $tag }}>
+  {{- if $href -}}
+  <a href="{{ $href }}" class="inline-flex items-center gap-2 h-11 pl-3 pr-4 rounded-pill shadow-[inset_0_0_0_1px_var(--color-hairline)] text-primary font-body text-2xl no-underline {{ $extra }}">
+    {{- with $icon }}{{ partial "icon.html" (dict "name" . "size" 22 "class" "text-primary shrink-0") }}{{ end -}}
+    <span class="whitespace-nowrap">{{ $text }}</span>
+  </a>
+  {{- else -}}
+  <button class="inline-flex items-center gap-2 h-11 pl-3 pr-4 rounded-pill shadow-[inset_0_0_0_1px_var(--color-hairline)] text-primary font-body text-2xl no-underline {{ $extra }}">
+    {{- with $icon }}{{ partial "icon.html" (dict "name" . "size" 22 "class" "text-primary shrink-0") }}{{ end -}}
+    <span class="whitespace-nowrap">{{ $text }}</span>
+  </button>
+  {{- end -}}
 {{- else -}}
-<{{ $tag }}{{ with $href }} href="{{ . }}"{{ end }} class="inline-flex items-center justify-center gap-2.5 h-10 px-5 rounded-sm bg-surface-cta text-on-fill font-body font-medium text-lg tracking-wide no-underline {{ $extra }}">
-  {{- with $icon }}{{ partial "icon.html" (dict "name" . "size" 24 "class" "text-on-fill shrink-0") }}{{ end -}}
-  {{ $text }}
-</{{ $tag }}>
+  {{- if $href -}}
+  <a href="{{ $href }}" class="inline-flex items-center justify-center gap-2.5 h-10 px-5 rounded-sm bg-surface-cta text-on-fill font-body font-medium text-lg tracking-wide no-underline {{ $extra }}">
+    {{- with $icon }}{{ partial "icon.html" (dict "name" . "size" 24 "class" "text-on-fill shrink-0") }}{{ end -}}
+    {{ $text }}
+  </a>
+  {{- else -}}
+  <button class="inline-flex items-center justify-center gap-2.5 h-10 px-5 rounded-sm bg-surface-cta text-on-fill font-body font-medium text-lg tracking-wide no-underline {{ $extra }}">
+    {{- with $icon }}{{ partial "icon.html" (dict "name" . "size" 24 "class" "text-on-fill shrink-0") }}{{ end -}}
+    {{ $text }}
+  </button>
+  {{- end -}}
 {{- end -}}

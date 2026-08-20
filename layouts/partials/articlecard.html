@@ -1,0 +1,21 @@
+{{- $title := .title -}}
+{{- $date := .date -}}
+{{- $summary := .summary -}}
+{{- $tags := .tags -}}
+{{- $href := .href -}}
+{{- $cta := .cta | default "Read post" -}}
+<article class="relative flex flex-col gap-4 p-6 rounded-sm bg-surface-card shadow-[inset_0_0_0_0.5px_var(--color-hairline)]">
+  <h3 class="font-body font-medium text-[32px] leading-none text-primary sm:text-[40px] lg:text-[48px]">{{ $title }}</h3>
+  {{- with $date }}
+  <time datetime="{{ .Format "2006-01-02" }}" class="font-body text-sm text-primary">{{ .Format "02 January 2006" }}</time>
+  {{- end }}
+  {{- with $tags }}
+  <div class="flex flex-wrap gap-2">
+    {{- range . }}
+    {{ partial "articletag.html" (dict "text" (upper .)) }}
+    {{- end }}
+  </div>
+  {{- end }}
+  <p class="font-body text-2xl text-primary">{{ $summary }}</p>
+  {{ partial "button.html" (dict "variant" "filled" "href" $href "text" (upper $cta) "class" "self-start") }}
+</article>

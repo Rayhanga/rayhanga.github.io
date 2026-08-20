@@ -14,8 +14,28 @@
   {{ partial "head.html" . }}
 </head>
 <body class="min-h-screen bg-surface-page text-primary font-body antialiased flex flex-col">
+  {{ partial "header.html" . }}
   <main class="flex-1 w-full px-6 lg:px-[var(--page-margin)]">
     {{ block "main" . }}{{ end }}
   </main>
+  {{ partial "footer.html" . }}
+  <script>
+  (function () {
+    function apply(theme) {
+      document.documentElement.dataset.theme = theme;
+      document.querySelectorAll('[data-theme-toggle-label]').forEach(function (el) {
+        el.textContent = theme === 'dark' ? 'Light' : 'Dark';
+      });
+    }
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-theme-toggle]');
+      if (!btn) return;
+      var next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', next);
+      apply(next);
+    });
+    apply(document.documentElement.dataset.theme || 'light');
+  })();
+  </script>
 </body>
 </html>

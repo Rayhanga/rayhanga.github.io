@@ -1,0 +1,16 @@
+{{ define "main" }}
+<article class="max-w-[600px] mx-auto py-16 flex flex-col gap-6">
+  <h1 class="font-body font-medium text-4xl text-primary">{{ .Title }}</h1>
+  <time datetime="{{ .Date.Format "2006-01-02" }}" class="font-body text-sm text-secondary">{{ .Date.Format "02 January 2006" }}</time>
+  {{- with .Params.tags }}
+  <div class="flex flex-wrap gap-2">
+    {{- range . }}{{ partial "articletag.html" (dict "text" (upper .)) }}{{ end }}
+  </div>
+  {{- end }}
+  <div class="font-body text-lg text-primary space-y-4">{{ .Content }}</div>
+  <div class="flex flex-wrap gap-3">
+    {{- with .Params.link }}{{ partial "button.html" (dict "variant" "filled" "href" . "text" "VISIT PROJECT") }}{{ end }}
+    {{ partial "button.html" (dict "variant" "ghost" "href" "/project/" "text" "Back to projects") }}
+  </div>
+</article>
+{{ end }}

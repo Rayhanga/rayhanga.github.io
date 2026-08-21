@@ -6,7 +6,7 @@
     "@tailwindcss/cli": "^4.0.0"
   },
   "scripts": {
-    "dev": "hugo server -D",
-    "build": "hugo --gc --minify"
+    "dev": "node build.js --dev",
+    "build": "node build.js"
   }
 }

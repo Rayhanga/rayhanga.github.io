@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <script>
   (function () {
-    var stored = localStorage.getItem('theme');
+    var stored = null;
+    try { stored = localStorage.getItem('theme'); } catch (e) {}
     var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     document.documentElement.dataset.theme = theme;
   })();
@@ -31,7 +32,7 @@
       var btn = e.target.closest('[data-theme-toggle]');
       if (!btn) return;
       var next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-      localStorage.setItem('theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
       apply(next);
     });
     apply(document.documentElement.dataset.theme || 'light');

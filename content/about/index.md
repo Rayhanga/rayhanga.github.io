@@ -10,25 +10,35 @@ timeline:
   - role: "Web System Developer Intern"
     org: "Indo4Ward"
     dates: "Feb 2021 – Aug 2021"
+education:
+  - degree: "Master of Information System Management"
+    org: "Gunadarma University"
+    year: "2023"
+    thesis: "Implementation of GitOps in Containerized Infrastructure"
+  - degree: "Bachelor of Engineering, Informatics Engineering"
+    org: "Gunadarma University"
+    year: "2022"
+    thesis: "Development of Web Aggregator for Gunadarma University Information Based on Web Scraping"
+certifications:
+  - name: "Google Cloud Certified: Associate Cloud Engineer"
+    year: "2023"
+  - name: "Certified Kubernetes Administrator (CKA)"
+    year: "In Progress"
 ---
-I'm Rayhan — a software engineer working in site reliability engineering
-and cloud infrastructure. I'm currently at GoTo Financial, where I build
-production Go services on Kubernetes and own the logging and
-observability stack end to end: OpenTelemetry pipelines, large Kafka
-clusters, and Elasticsearch/OpenSearch deployments.
+I'm a Software Engineer at GoTo Financial, specializing in Site
+Reliability Engineering (SRE), high-scale infrastructure, and
+observability.
 
-Most of what I do is migrations, at scale, without downtime — moving
-hundreds of Kubernetes clusters off td-agent onto the OpenTelemetry
-Collector, cutting hundreds of Kafka and Elasticsearch instances over to
-new infrastructure across AWS, GCP, AliCloud, and TencentCloud, that kind
-of thing. I also build the tooling that makes reliability legible to
-other teams — SLO dashboards, automated reporting, alerting pipelines.
+I work on Kubernetes-based systems, Kafka clusters, and
+log/observability pipelines. I led the migration of our log collection
+pipeline to OpenTelemetry, and have also worked on multi-cloud
+infrastructure migrations, Elasticsearch/OpenSearch deployments, and
+internal developer platforms for large-scale production systems.
 
-Before this I was doing much the same thing as an associate engineer, and
-before that I was interning at Indo4Ward, mostly rewriting a JavaScript
-codebase into TypeScript and bolting on real-time features.
+Before this I worked as an Associate Software Engineer on the same team,
+and before that I interned at Indo4Ward as a Web System Developer.
 
-I did my bachelor's and master's at Gunadarma University — informatics
-engineering, then information systems management, with a thesis on
-GitOps in containerized infrastructure. I'm a Google Cloud Certified
-Associate Cloud Engineer, and working through the CKA.
+I hold a Master's in Information System Management and a Bachelor's in
+Informatics Engineering, both from Gunadarma University. I'm a Google
+Cloud Certified Associate Cloud Engineer, and currently working toward
+the CKA.

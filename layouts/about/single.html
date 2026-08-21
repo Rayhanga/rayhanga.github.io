@@ -16,10 +16,35 @@
     {{- end }}
   </ol>
   {{- end }}
-  <div class="flex items-center gap-4 pt-4">
-    {{- with site.Params.social.email }}<a href="{{ . }}" class="text-primary" aria-label="Email">{{ partial "icon.html" (dict "name" "BasicMail24" "size" 20) }}</a>{{ end }}
-    {{- with site.Params.social.github }}<a href="{{ . }}" class="text-primary" aria-label="GitHub">{{ partial "icon.html" (dict "name" "SymbolsGithub24" "size" 20) }}</a>{{ end }}
-    {{- with site.Params.social.linkedin }}<a href="{{ . }}" class="text-primary" aria-label="LinkedIn">{{ partial "icon.html" (dict "name" "SymbolsLinkedin24" "size" 20) }}</a>{{ end }}
+  {{- with .Params.education }}
+  <h2 class="font-body font-medium text-2xl text-primary">Education</h2>
+  <ul class="flex flex-col gap-4">
+    {{- range . }}
+    <li>
+      <p class="font-body text-sm text-secondary">{{ .year }}</p>
+      <h3 class="font-body font-medium text-lg text-primary">{{ .degree }}</h3>
+      <p class="font-body text-sm text-secondary">{{ .org }}</p>
+      {{- with .thesis }}
+      <p class="font-body text-sm text-primary">Thesis: {{ . }}</p>
+      {{- end }}
+    </li>
+    {{- end }}
+  </ul>
+  {{- end }}
+  {{- with .Params.certifications }}
+  <h2 class="font-body font-medium text-2xl text-primary">Certifications</h2>
+  <ul class="flex flex-col gap-2">
+    {{- range . }}
+    <li class="font-body text-primary">{{ .name }} <span class="text-secondary text-sm">— {{ .year }}</span></li>
+    {{- end }}
+  </ul>
+  {{- end }}
+  <h2 class="font-body font-medium text-2xl text-primary">Contact</h2>
+  <div class="flex flex-wrap gap-3">
+    {{- with site.Params.social.email }}{{ partial "button.html" (dict "variant" "ghost" "href" . "icon" "BasicMail24" "text" "Email") }}{{ end }}
+    {{- with site.Params.social.github }}{{ partial "button.html" (dict "variant" "ghost" "href" . "icon" "SymbolsGithub24" "text" "GitHub") }}{{ end }}
+    {{- with site.Params.social.linkedin }}{{ partial "button.html" (dict "variant" "ghost" "href" . "icon" "SymbolsLinkedin24" "text" "LinkedIn") }}{{ end }}
+    {{- with .Params.cv }}{{ partial "button.html" (dict "variant" "filled" "href" . "text" "Download CV") }}{{ end }}
   </div>
 </section>
 {{ end }}

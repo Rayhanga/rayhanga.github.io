@@ -2,6 +2,8 @@ baseURL = "https://rayhanga.github.io/"
 locale = "en-us"
 title = "Rayhan Gusty Alif"
 disableKinds = ["taxonomy", "term"]
+theme = "minimalist-manifesto"
+themesDir = "../"
 
 [params]
   role = "SRE & DevOps Engineer"

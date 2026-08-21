@@ -24,8 +24,14 @@
   (function () {
     function apply(theme) {
       document.documentElement.dataset.theme = theme;
-      document.querySelectorAll('[data-theme-toggle-label]').forEach(function (el) {
-        el.textContent = theme === 'dark' ? 'Light' : 'Dark';
+      document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
+        btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+      });
+      document.querySelectorAll('[data-theme-icon-sun]').forEach(function (el) {
+        el.classList.toggle('hidden', theme !== 'dark');
+      });
+      document.querySelectorAll('[data-theme-icon-moon]').forEach(function (el) {
+        el.classList.toggle('hidden', theme === 'dark');
       });
     }
     document.addEventListener('click', function (e) {

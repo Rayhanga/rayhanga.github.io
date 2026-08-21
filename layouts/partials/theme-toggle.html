@@ -1,3 +1,4 @@
-<button type="button" data-theme-toggle aria-label="Toggle color theme" class="inline-flex items-center justify-center h-9 px-3 rounded-pill shadow-[inset_0_0_0_1px_var(--color-hairline)] text-primary font-body text-xs tracking-wide">
-  <span data-theme-toggle-label>Dark</span>
+<button type="button" data-theme-toggle aria-label="Switch to dark mode" class="inline-flex items-center justify-center h-9 w-9 rounded-pill shadow-[inset_0_0_0_1px_var(--color-hairline)] text-primary">
+  <span data-theme-icon-sun class="hidden">{{ partial "icon.html" (dict "name" "BasicSun24" "size" 18 "class" "text-primary") }}</span>
+  <span data-theme-icon-moon>{{ partial "icon.html" (dict "name" "BasicMoon24" "size" 18 "class" "text-primary") }}</span>
 </button>

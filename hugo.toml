@@ -5,6 +5,9 @@ disableKinds = ["taxonomy", "term"]
 theme = "minimalist-manifesto"
 themesDir = "../"
 
+[build]
+  writeStats = true
+
 [params]
   role = "SRE & DevOps Engineer"
 

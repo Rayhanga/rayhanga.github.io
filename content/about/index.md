@@ -20,8 +20,6 @@ education:
     year: "2022"
     thesis: "Development of Web Aggregator for Gunadarma University Information Based on Web Scraping"
 certifications:
-  - name: "Google Cloud Certified: Associate Cloud Engineer"
-    year: "2023"
   - name: "Certified Kubernetes Administrator (CKA)"
     year: "In Progress"
 ---
@@ -39,6 +37,5 @@ Before this I worked as an Associate Software Engineer on the same team,
 and before that I interned at Indo4Ward as a Web System Developer.
 
 I hold a Master's in Information System Management and a Bachelor's in
-Informatics Engineering, both from Gunadarma University. I'm a Google
-Cloud Certified Associate Cloud Engineer, and currently working toward
-the CKA.
+Informatics Engineering, both from Gunadarma University. I'm currently
+working toward the CKA.

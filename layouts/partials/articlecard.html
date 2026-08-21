@@ -17,5 +17,5 @@
   </div>
   {{- end }}
   <p class="font-body text-2xl text-primary">{{ $summary | default "TBD" }}</p>
-  {{ partial "button.html" (dict "variant" "filled" "href" $href "text" (upper $cta) "class" "self-center") }}
+  {{ partial "button.html" (dict "variant" "filled" "href" $href "text" (upper $cta) "class" "self-start") }}
 </article>

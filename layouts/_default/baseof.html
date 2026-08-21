@@ -16,7 +16,7 @@
 </head>
 <body class="min-h-screen bg-surface-page text-primary font-body antialiased flex flex-col">
   {{ partial "header.html" . }}
-  <main class="flex-1 w-full px-6 lg:px-[var(--page-margin)]">
+  <main class="flex-1 w-full px-6 lg:px-[var(--page-margin)] flex flex-col">
     {{ block "main" . }}{{ end }}
   </main>
   {{ partial "footer.html" . }}

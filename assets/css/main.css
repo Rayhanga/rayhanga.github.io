@@ -37,15 +37,13 @@
   --font-body: var(--font-body);
   --font-display: var(--font-display);
 
-  /* Spacing (overrides Tailwind's default 1-8 scale with exact token px values) */
-  --spacing-1: var(--space-1);
-  --spacing-2: var(--space-2);
-  --spacing-3: var(--space-3);
-  --spacing-4: var(--space-4);
-  --spacing-5: var(--space-5);
-  --spacing-6: var(--space-6);
-  --spacing-7: var(--space-7);
-  --spacing-8: var(--space-8);
+  /* No spacing-scale override: the design tokens (space-1..8 in
+     tokens/spacing.css) are NOT mapped onto the Tailwind numeric scale,
+     because every template in this codebase uses spacing utilities like
+     p-, m-, h-, and gap- assuming the default Tailwind meaning for those
+     numbers. The one token that genuinely needs its exact px value
+     (page-margin, 250px) is referenced directly via the arbitrary-value
+     syntax px-[var(--page-margin)] instead. */
 
   /* Radius */
   --radius-sm: var(--radius-sm);

@@ -3,9 +3,9 @@
   <h1 class="font-body font-medium text-4xl text-primary">{{ .Title }}</h1>
   <div class="font-body text-lg text-primary space-y-4">{{ .Content }}</div>
   <div class="flex items-center gap-4 pt-4">
-    {{- with site.Params.social.email }}<a href="{{ . }}" class="text-primary">{{ partial "icon.html" (dict "name" "BasicMail24" "size" 20) }}</a>{{ end }}
-    {{- with site.Params.social.github }}<a href="{{ . }}" class="text-primary">{{ partial "icon.html" (dict "name" "SymbolsGithub24" "size" 20) }}</a>{{ end }}
-    {{- with site.Params.social.linkedin }}<a href="{{ . }}" class="text-primary">{{ partial "icon.html" (dict "name" "SymbolsLinkedin24" "size" 20) }}</a>{{ end }}
+    {{- with site.Params.social.email }}<a href="{{ . }}" class="text-primary" aria-label="Email">{{ partial "icon.html" (dict "name" "BasicMail24" "size" 20) }}</a>{{ end }}
+    {{- with site.Params.social.github }}<a href="{{ . }}" class="text-primary" aria-label="GitHub">{{ partial "icon.html" (dict "name" "SymbolsGithub24" "size" 20) }}</a>{{ end }}
+    {{- with site.Params.social.linkedin }}<a href="{{ . }}" class="text-primary" aria-label="LinkedIn">{{ partial "icon.html" (dict "name" "SymbolsLinkedin24" "size" 20) }}</a>{{ end }}
   </div>
 </section>
 {{ end }}

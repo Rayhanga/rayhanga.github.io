@@ -1,0 +1,9 @@
+{{- $items := .items -}}
+<nav aria-label="Breadcrumb">
+  <ol class="flex flex-wrap items-center gap-2 font-body text-sm text-secondary">
+    {{- range $i, $item := $items }}
+    {{- if $i }}<li aria-hidden="true">/</li>{{- end }}
+    <li>{{- if $item.href }}<a href="{{ $item.href }}" class="text-secondary no-underline hover:text-primary">{{ $item.text }}</a>{{- else }}<span class="text-primary">{{ $item.text }}</span>{{- end }}</li>
+    {{- end }}
+  </ol>
+</nav>

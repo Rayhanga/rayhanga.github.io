@@ -1,5 +1,6 @@
 {{ define "main" }}
 <section class="flex flex-col gap-6 py-16 max-w-[600px] mx-auto">
+  {{ partial "breadcrumbs.html" (dict "items" (slice (dict "text" "Home" "href" "/") (dict "text" "About"))) }}
   <h1 class="font-body font-medium text-4xl text-primary">{{ .Title }}</h1>
   <div class="font-body text-lg text-primary space-y-4">{{ .Content }}</div>
   <div class="flex items-center gap-4 pt-4">

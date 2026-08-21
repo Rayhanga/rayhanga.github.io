@@ -3,28 +3,23 @@
 {{- $text := .text -}}
 {{- $icon := .icon -}}
 {{- $extra := .class | default "" -}}
-{{- if eq $variant "ghost" -}}
-  {{- if $href -}}
-  <a href="{{ $href }}" class="inline-flex items-center gap-2 h-11 pl-3 pr-4 rounded-pill shadow-[inset_0_0_0_1px_var(--color-hairline)] text-primary font-body text-2xl no-underline {{ $extra }}">
-    {{- with $icon }}{{ partial "icon.html" (dict "name" . "size" 22 "class" "text-primary shrink-0") }}{{ end -}}
-    <span class="whitespace-nowrap">{{ $text }}</span>
-  </a>
-  {{- else -}}
-  <button class="inline-flex items-center gap-2 h-11 pl-3 pr-4 rounded-pill shadow-[inset_0_0_0_1px_var(--color-hairline)] text-primary font-body text-2xl no-underline {{ $extra }}">
-    {{- with $icon }}{{ partial "icon.html" (dict "name" . "size" 22 "class" "text-primary shrink-0") }}{{ end -}}
-    <span class="whitespace-nowrap">{{ $text }}</span>
-  </button>
-  {{- end -}}
+{{- $isGhost := eq $variant "ghost" -}}
+{{- $iconSize := 24 -}}
+{{- $class := printf "inline-flex items-center justify-center gap-2.5 h-10 px-5 rounded-sm bg-surface-cta text-on-fill font-body font-medium text-lg tracking-wide no-underline %s" $extra -}}
+{{- $iconClass := "text-on-fill shrink-0" -}}
+{{- if $isGhost -}}
+  {{- $iconSize = 22 -}}
+  {{- $class = printf "inline-flex items-center gap-2 h-11 pl-3 pr-4 rounded-pill shadow-[inset_0_0_0_1px_var(--color-hairline)] text-primary font-body text-2xl no-underline %s" $extra -}}
+  {{- $iconClass = "text-primary shrink-0" -}}
+{{- end -}}
+{{- if $href -}}
+<a href="{{ $href }}" class="{{ $class }}">
+  {{- with $icon }}{{ partial "icon.html" (dict "name" . "size" $iconSize "class" $iconClass) }}{{ end -}}
+  {{- if $isGhost -}}<span class="whitespace-nowrap">{{ $text }}</span>{{- else -}}{{ $text }}{{- end -}}
+</a>
 {{- else -}}
-  {{- if $href -}}
-  <a href="{{ $href }}" class="inline-flex items-center justify-center gap-2.5 h-10 px-5 rounded-sm bg-surface-cta text-on-fill font-body font-medium text-lg tracking-wide no-underline {{ $extra }}">
-    {{- with $icon }}{{ partial "icon.html" (dict "name" . "size" 24 "class" "text-on-fill shrink-0") }}{{ end -}}
-    {{ $text }}
-  </a>
-  {{- else -}}
-  <button class="inline-flex items-center justify-center gap-2.5 h-10 px-5 rounded-sm bg-surface-cta text-on-fill font-body font-medium text-lg tracking-wide no-underline {{ $extra }}">
-    {{- with $icon }}{{ partial "icon.html" (dict "name" . "size" 24 "class" "text-on-fill shrink-0") }}{{ end -}}
-    {{ $text }}
-  </button>
-  {{- end -}}
+<button type="button" class="{{ $class }}">
+  {{- with $icon }}{{ partial "icon.html" (dict "name" . "size" $iconSize "class" $iconClass) }}{{ end -}}
+  {{- if $isGhost -}}<span class="whitespace-nowrap">{{ $text }}</span>{{- else -}}{{ $text }}{{- end -}}
+</button>
 {{- end -}}

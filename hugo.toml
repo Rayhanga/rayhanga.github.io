@@ -1,6 +1,7 @@
 baseURL = "https://rayhanga.github.io/"
 languageCode = "en-us"
 title = "Rayhan Gusty Alif"
+disableKinds = ["taxonomy", "term"]
 
 [params]
   role = "Computer & Open Source Enthusiast"

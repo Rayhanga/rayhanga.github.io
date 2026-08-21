@@ -9,6 +9,7 @@ theme = "minimalist-manifesto"
 
 [params]
   role = "SRE & DevOps Engineer"
+  cv = "https://docs.google.com/document/d/1cNftuhIEofydcsnAcCn2VYshLPSw6eBIsrS6pLq4s5E/edit?usp=sharing"
 
 [params.social]
   github = "https://github.com/rayhanga"

@@ -1,8 +1,9 @@
 ---
 title: "Rayhan Gusty Alif"
 ---
-Software engineer working in site reliability engineering and cloud
-infrastructure — Kubernetes, observability, and migrations that mostly
-don't wake anyone up at 3am. I build small tools, read other people's
-code more than I write my own, and write things down here so I remember
-them later.
+I'm a Software Engineer at GoTo Financial, specializing in Site
+Reliability Engineering (SRE), high-scale infrastructure, and
+observability. I build on Kubernetes and Kafka, led the migration of our
+log collection pipeline to OpenTelemetry, and work on multi-cloud
+infrastructure migrations and internal developer platforms for
+large-scale production systems.

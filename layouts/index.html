@@ -1,9 +1,9 @@
 {{ define "main" }}
-<section class="flex flex-col gap-6 py-16 lg:py-24 max-w-[940px] mx-auto">
+<section class="flex flex-col items-center text-center gap-6 py-16 lg:py-24 max-w-[940px] mx-auto">
   <p class="font-display text-sm text-secondary tracking-wide uppercase">{{ site.Params.role }}</p>
   <h1 class="font-body font-medium text-5xl sm:text-6xl lg:text-[64px] leading-none text-primary">{{ .Title }}</h1>
-  {{ with .Content }}<div class="font-body text-lg text-primary max-w-[600px]">{{ . }}</div>{{ end }}
-  <div class="flex flex-wrap gap-3 pt-2">
+  {{ with .Content }}<div class="font-body text-lg text-primary max-w-[600px] mx-auto">{{ . }}</div>{{ end }}
+  <div class="flex flex-wrap justify-center gap-3 pt-2">
     {{- range site.Menus.main }}
     {{ partial "button.html" (dict "variant" "ghost" "href" .URL "text" .Name) }}
     {{- end }}

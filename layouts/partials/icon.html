@@ -1,7 +1,7 @@
 {{- $name := .name -}}
 {{- $size := .size | default 24 -}}
 {{- $class := .class | default "" -}}
-{{- $icon := index site.Data.icons $name -}}
+{{- $icon := index hugo.Data.icons $name -}}
 {{- if $icon -}}
 <svg width="{{ $size }}" height="{{ $size }}" viewBox="{{ $icon.viewBox }}" fill="none" class="{{ $class }}" aria-hidden="true">{{ $icon.body | safeHTML }}</svg>
 {{- end -}}

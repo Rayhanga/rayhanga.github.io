@@ -1,0 +1,3 @@
+[submodule "themes/minimalist-manifesto"]
+	path = themes/minimalist-manifesto
+	url = https://github.com/Rayhanga/minimalist-manifesto.git

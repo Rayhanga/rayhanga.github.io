@@ -3,7 +3,6 @@ locale = "en-us"
 title = "Rayhan Gusty Alif"
 disableKinds = ["taxonomy", "term"]
 theme = "minimalist-manifesto"
-themesDir = "../"
 
 [build]
   writeStats = true

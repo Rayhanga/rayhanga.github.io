@@ -39,12 +39,5 @@
     {{- end }}
   </ul>
   {{- end }}
-  <h2 class="font-body font-medium text-2xl text-primary">Contact</h2>
-  <div class="flex flex-wrap gap-3">
-    {{- with site.Params.social.email }}{{ partial "button.html" (dict "variant" "ghost" "href" . "icon" "BasicMail24" "text" "Email") }}{{ end }}
-    {{- with site.Params.social.github }}{{ partial "button.html" (dict "variant" "ghost" "href" . "icon" "SymbolsGithub24" "text" "GitHub") }}{{ end }}
-    {{- with site.Params.social.linkedin }}{{ partial "button.html" (dict "variant" "ghost" "href" . "icon" "SymbolsLinkedin24" "text" "LinkedIn") }}{{ end }}
-    {{- with .Params.cv }}{{ partial "button.html" (dict "variant" "filled" "href" . "text" "Download CV") }}{{ end }}
-  </div>
 </section>
 {{ end }}

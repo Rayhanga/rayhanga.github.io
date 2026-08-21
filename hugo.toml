@@ -14,25 +14,25 @@ disableKinds = ["taxonomy", "term"]
   email = "mailto:rayhangustyalif@gmail.com"
 
 [[menu.main]]
-  name = "About"
+  name = "About me"
   url = "/about/"
   weight = 10
   [menu.main.params]
     icon = "BasicUser24"
 
 [[menu.main]]
-  name = "Blog"
-  url = "/blog/"
+  name = "My projects"
+  url = "/project/"
   weight = 20
   [menu.main.params]
-    icon = "BasicPencilEdit24"
+    icon = "BasicCase24"
 
 [[menu.main]]
-  name = "Projects"
-  url = "/project/"
+  name = "My blog"
+  url = "/blog/"
   weight = 30
   [menu.main.params]
-    icon = "BasicCase24"
+    icon = "BasicPencilEdit24"
 
 [taxonomies]
   tag = "tags"

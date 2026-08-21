@@ -32,5 +32,3 @@ I did my bachelor's and master's at Gunadarma University — informatics
 engineering, then information systems management, with a thesis on
 GitOps in containerized infrastructure. I'm a Google Cloud Certified
 Associate Cloud Engineer, and working through the CKA.
-
-Created with love, not a template — well, aside from this one.

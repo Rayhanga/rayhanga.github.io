@@ -15,7 +15,7 @@
   <h2 class="font-body font-medium text-2xl text-primary mb-6">Latest posts</h2>
   <div class="grid gap-6">
     {{- range first 2 (.ByDate.Reverse) }}
-    {{ partial "articlecard.html" (dict "title" .Title "date" .Date "summary" (.Params.summary | default .Summary) "tags" .Params.tags "href" .RelPermalink) }}
+    {{ partial "articlecard.html" (dict "title" .Title "date" .Date "summary" (.Params.summary | default .Summary) "tags" .Params.tags "href" .RelPermalink "size" "compact") }}
     {{- end }}
   </div>
 </section>

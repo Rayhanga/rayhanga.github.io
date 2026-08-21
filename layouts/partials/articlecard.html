@@ -4,8 +4,19 @@
 {{- $tags := .tags -}}
 {{- $href := .href -}}
 {{- $cta := .cta | default "Read post" -}}
-<article class="relative flex flex-col gap-4 p-6 rounded-sm bg-surface-card shadow-[inset_0_0_0_0.5px_var(--color-hairline)]">
-  <h3 class="font-body font-medium text-[32px] leading-none text-primary sm:text-[40px] lg:text-[48px]">{{ $title }}</h3>
+{{- $compact := eq (.size | default "default") "compact" -}}
+{{- $padClass := "p-6" -}}
+{{- $gapClass := "gap-4" -}}
+{{- $titleClass := "font-body font-medium text-[32px] leading-none text-primary sm:text-[40px] lg:text-[48px]" -}}
+{{- $summaryClass := "font-body text-2xl text-primary" -}}
+{{- if $compact -}}
+  {{- $padClass = "p-5" -}}
+  {{- $gapClass = "gap-3" -}}
+  {{- $titleClass = "font-body font-medium text-[22px] leading-tight text-primary sm:text-[26px]" -}}
+  {{- $summaryClass = "font-body text-base text-primary" -}}
+{{- end -}}
+<article class="relative flex flex-col {{ $gapClass }} {{ $padClass }} rounded-sm bg-surface-card shadow-[inset_0_0_0_0.5px_var(--color-hairline)]">
+  <h3 class="{{ $titleClass }}">{{ $title }}</h3>
   {{- if not $date.IsZero }}
   <time datetime="{{ $date.Format "2006-01-02" }}" class="font-body text-sm text-primary">{{ $date.Format "02 January 2006" }}</time>
   {{- end }}
@@ -16,6 +27,6 @@
     {{- end }}
   </div>
   {{- end }}
-  <p class="font-body text-2xl text-primary">{{ $summary | default "TBD" }}</p>
+  <p class="{{ $summaryClass }}">{{ $summary | default "TBD" }}</p>
   {{ partial "button.html" (dict "variant" "filled" "href" $href "text" (upper $cta) "class" "self-start") }}
 </article>

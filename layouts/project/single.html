@@ -7,7 +7,7 @@
     {{- range . }}{{ partial "articletag.html" (dict "text" (upper .)) }}{{ end }}
   </div>
   {{- end }}
-  <div class="font-body text-lg text-primary space-y-4">{{ .Content }}</div>
+  <div class="font-body text-lg text-primary space-y-4">{{ with .Content }}{{ . }}{{ else }}<p>TBD</p>{{ end }}</div>
   <div class="flex flex-wrap gap-3">
     {{- with .Params.link }}{{ partial "button.html" (dict "variant" "filled" "href" . "text" "VISIT PROJECT") }}{{ end }}
     {{ partial "button.html" (dict "variant" "ghost" "href" "/project/" "text" "Back to projects") }}

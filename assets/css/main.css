@@ -48,6 +48,7 @@
   /* Radius */
   --radius-sm: var(--radius-sm);
   --radius-pill: var(--radius-pill);
+  --radius-circle: var(--radius-circle);
 
   /* Tracking */
   --tracking-wide: var(--letter-spacing-wide);

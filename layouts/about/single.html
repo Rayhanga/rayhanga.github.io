@@ -3,6 +3,19 @@
   {{ partial "breadcrumbs.html" (dict "items" (slice (dict "text" "Home" "href" "/") (dict "text" "About"))) }}
   <h1 class="font-body font-medium text-4xl text-primary">{{ .Title }}</h1>
   <div class="font-body text-lg text-primary space-y-4">{{ .Content }}</div>
+  {{- with .Params.timeline }}
+  <h2 class="font-body font-medium text-2xl text-primary">Timeline</h2>
+  <ol class="flex flex-col gap-8">
+    {{- range . }}
+    <li class="relative pl-6 border-l border-divider">
+      <span class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-circle bg-primary"></span>
+      <p class="font-body text-sm text-secondary">{{ .dates }}</p>
+      <h3 class="font-body font-medium text-lg text-primary">{{ .role }}</h3>
+      <p class="font-body text-sm text-secondary">{{ .org }}</p>
+    </li>
+    {{- end }}
+  </ol>
+  {{- end }}
   <div class="flex items-center gap-4 pt-4">
     {{- with site.Params.social.email }}<a href="{{ . }}" class="text-primary" aria-label="Email">{{ partial "icon.html" (dict "name" "BasicMail24" "size" 20) }}</a>{{ end }}
     {{- with site.Params.social.github }}<a href="{{ . }}" class="text-primary" aria-label="GitHub">{{ partial "icon.html" (dict "name" "SymbolsGithub24" "size" 20) }}</a>{{ end }}

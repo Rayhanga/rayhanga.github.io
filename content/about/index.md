@@ -1,5 +1,21 @@
 ---
 title: "About"
+timeline:
+  - role: "Software Engineer"
+    org: "GoTo Financial"
+    dates: "Oct 2024 – Present"
+  - role: "Master of Information System Management"
+    org: "Gunadarma University"
+    dates: "2023"
+  - role: "Associate Software Engineer"
+    org: "GoTo Financial"
+    dates: "May 2022 – Oct 2024"
+  - role: "Bachelor of Engineering, Informatics Engineering"
+    org: "Gunadarma University"
+    dates: "2022"
+  - role: "Web System Developer Intern"
+    org: "Indo4Ward"
+    dates: "Feb 2021 – Aug 2021"
 ---
 I'm Rayhan — a software engineer working in site reliability engineering
 and cloud infrastructure. I'm currently at GoTo Financial, where I build

@@ -2,11 +2,14 @@
 <section class="flex-1 flex flex-col items-center justify-center text-center gap-6 py-16 lg:py-24 max-w-[940px] mx-auto">
   <p class="font-display text-sm text-secondary tracking-wide uppercase">{{ site.Params.role }}</p>
   <h1 class="font-body font-medium text-5xl sm:text-6xl lg:text-[64px] leading-none text-primary">{{ .Title }}</h1>
-  <div class="flex flex-wrap justify-center gap-3 pt-2">
+  <div class="flex flex-wrap justify-center gap-3 pt-8">
     {{- range site.Menus.main }}
-    {{ partial "button.html" (dict "variant" "ghost" "href" .URL "text" .Name) }}
+    {{ partial "button.html" (dict "variant" "ghost" "href" .URL "icon" .Params.icon "text" .Name) }}
     {{- end }}
   </div>
+  {{- with site.Params.cv }}
+  <a href="{{ . }}" class="font-body text-sm text-secondary no-underline hover:text-primary">Download resume</a>
+  {{- end }}
 </section>
 {{ $posts := where site.RegularPages "Section" "blog" }}
 {{ with $posts }}

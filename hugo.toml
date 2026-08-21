@@ -17,16 +17,22 @@ disableKinds = ["taxonomy", "term"]
   name = "About"
   url = "/about/"
   weight = 10
+  [menu.main.params]
+    icon = "BasicUser24"
 
 [[menu.main]]
   name = "Blog"
   url = "/blog/"
   weight = 20
+  [menu.main.params]
+    icon = "BasicPencilEdit24"
 
 [[menu.main]]
   name = "Projects"
   url = "/project/"
   weight = 30
+  [menu.main.params]
+    icon = "BasicCase24"
 
 [taxonomies]
   tag = "tags"

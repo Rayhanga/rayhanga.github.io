@@ -4,7 +4,7 @@ title = "Rayhan Gusty Alif"
 disableKinds = ["taxonomy", "term"]
 
 [params]
-  role = "Software Engineer — Site Reliability Engineering & Cloud Infrastructure"
+  role = "SRE & DevOps Engineer"
 
 [params.social]
   github = "https://github.com/rayhanga"

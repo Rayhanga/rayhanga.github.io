@@ -1,6 +1,6 @@
 ---
 title: "DataGundar"
-date: 2019-01-01
+date: 2019-10-27
 tags: ["gun.js", "python", "automation"]
 summary: "Simplifying the tangle of information gathering at Gunadarma University."
 description: "A small suite of tools built to simplify the complex information gathering required while attending Gunadarma University."

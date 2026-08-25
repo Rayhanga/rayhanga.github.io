@@ -7,6 +7,10 @@ theme = "minimalist-manifesto"
 [build]
   writeStats = true
 
+[security]
+  [security.exec]
+    allow = ["^(dart-)?sass$", "^go$", "^git$", "^node$", "^postcss$", "^tailwindcss$"]
+
 [params]
   role = "SRE & DevOps Engineer"
   cv = "https://docs.google.com/document/d/1cNftuhIEofydcsnAcCn2VYshLPSw6eBIsrS6pLq4s5E/edit?usp=sharing"
